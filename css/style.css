@@ -78,6 +78,7 @@ input::placeholder {
 }
 .btn:hover {
   background: linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%);
+  box-shadow: 0 16px 32px 0 rgba(255, 98, 87, 0.5);
 }
 .btn:focus {
   border: none;
@@ -118,6 +119,26 @@ input::placeholder {
 }
 .image-container img {
   width: 100%;
+}
+
+.error {
+  position: relative;
+}
+.error input {
+  background-color: rgba(255, 98, 87, 0.15);
+  border-color: hsl(4, 100%, 67%);
+}
+.error input::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+.error input:focus {
+  border-color: #ff3224;
+}
+.error label::after {
+  content: "Oops, wrong format";
+  position: absolute;
+  right: 0;
+  color: hsl(4, 100%, 67%);
 }
 
 .main-container {

@@ -92,6 +92,7 @@ input {
 
     &:hover {
         background: $gradient;
+        box-shadow: 0 16px 32px 0 rgba($clr-primary, 0.5);
     }
 
     &:focus {
@@ -139,6 +140,31 @@ input {
 
     img {
         width: 100%;
+    }
+}
+
+// Error state
+.error {
+    position: relative;
+
+    input {
+        background-color: rgba($clr-primary, 0.15);
+        border-color: $clr-primary;
+
+        &::placeholder {
+            color: $clr-primary;
+        }
+
+        &:focus {
+            border-color: darken($clr-primary, 10%);
+        }
+    }
+    
+    label::after {
+        content: 'Oops, wrong format'; 
+        position: absolute;
+        right: 0;
+        color: $clr-primary;
     }
 }
 
