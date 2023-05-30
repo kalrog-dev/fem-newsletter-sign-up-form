@@ -22,6 +22,6 @@ submitBtn.addEventListener('click', (e) => {
 
 // Email validation test
 function emailCheck(str) {
-    const regex = /^[\w.]+@[\w]+[.]{1}[\w]+$/;
+    const regex = /^[\w.]+@[\w]+[.]{1}[a-zA-Z]{2,}$/;
     return regex.test(str);
 }
