@@ -1,8 +1,10 @@
 // Form variables
-const emailInput = document.getElementById('email-input');
-const submitBtn = document.getElementById('newsletter-submit-btn');
-const dismissBtn = document.getElementById('success-dismiss-btn');
 const formGroup = document.querySelector('.form-group');
+const submitBtn = document.getElementById('newsletter-submit-btn');
+const emailInput = document.getElementById('email-input');
+
+// Clear local storage when loading the index.html page
+localStorage.removeItem('email');
 
 // Redirect to Success page on-submit
 submitBtn.addEventListener('click', (e) => {
@@ -11,8 +13,9 @@ submitBtn.addEventListener('click', (e) => {
 
     // Email validation
     if (emailCheck(emailInput.value)) {
-        // If email passes the validation test, remove the error class and redirect to Seccess page
+        // If email passes the validation test, remove the error class, save email to local storage, and redirect to Seccess page
         formGroup.classList.remove('error');
+        localStorage.setItem('email', emailInput.value);
         window.location.href = './success.html';
     } else {
         // If email fails the test, add an error class

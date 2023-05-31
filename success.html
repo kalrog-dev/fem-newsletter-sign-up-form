@@ -6,14 +6,14 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
         <title>Frontend Mentor | Newsletter sign-up form with success message</title>
         <link rel="stylesheet" href="./css/style.css">
-        <script src="./app.js" defer></script>
+        <script src="./js/success.js" defer></script>
     </head>
     <body>
         <main class="main-container success-main-container">
             <div class="success-container">
                 <img src="./assets/images/icon-success.svg" alt="Success icon" aria-hidden="true">
                 <h1>Thanks for subscribing!</h1>
-                <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+                <p>A confirmation email has been sent to <b id="user-email"></b>. Please open it and click the button inside to confirm your subscription.</p>
             </div>
             <a id="success-dismiss-btn" class="btn" href="./index.html">Dismiss message</a>
         </main>
