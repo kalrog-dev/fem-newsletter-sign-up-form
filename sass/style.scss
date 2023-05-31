@@ -195,6 +195,9 @@ input {
     }
 
     body {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
         padding: 2em;
         background-color: $clr-neutral-700;
     }
@@ -205,7 +208,6 @@ input {
         align-items: center;
         gap: 2em;
         max-width: 928px;
-        top: 150px;
         margin-inline: auto;
         padding: 1.5em;
         border-radius: 36px;
